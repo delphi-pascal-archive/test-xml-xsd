@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Catalog>
+    <products>
+	    <product>
+		    <productID>Prod1</productID>
+        </product>
+	    <product>
+		    <productID>Prod1</productID>
+        </product>
+    </products>
+</Catalog>

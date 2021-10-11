@@ -1,0 +1,24 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Catalog" type="catalogType"/>
+    <xsd:complexType name="catalogType">
+        <xsd:choice>
+            <xsd:element name="products">
+                <xsd:complexType>
+                    <xsd:choice maxOccurs="100">
+                        <xsd:element name="product" maxOccurs="unbounded">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="productID" type="xsd:string"/>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:choice>
+                </xsd:complexType>
+                <xsd:unique name="unique_part">
+                    <xsd:selector xpath="./product"/>
+                    <xsd:field xpath="productID"/>
+                </xsd:unique>
+            </xsd:element>
+        </xsd:choice>
+    </xsd:complexType>
+</xsd:schema>
